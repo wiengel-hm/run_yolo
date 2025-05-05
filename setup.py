@@ -20,6 +20,7 @@ setup(
     entry_points={
         'console_scripts': [
             'run_yolo = run_yolo.run_yolo:main'
+            'run_onnx = run_yolo.run_onnx:main'
         ],
     },
 )
