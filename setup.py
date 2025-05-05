@@ -1,3 +1,7 @@
+import warnings
+from setuptools.command.easy_install import EasyInstallDeprecationWarning
+warnings.filterwarnings("ignore", category=EasyInstallDeprecationWarning)
+
 from setuptools import setup
 
 package_name = 'run_yolo'
@@ -19,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'run_yolo = run_yolo.run_yolo:main'
+            'run_yolo = run_yolo.run_yolo:main',
             'run_onnx = run_yolo.run_onnx:main'
         ],
     },
