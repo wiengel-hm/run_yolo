@@ -5,7 +5,7 @@ import cv2
 from ament_index_python.packages import get_package_prefix
 from rclpy.qos import qos_profile_sensor_data  # Quality of Service settings for real-time data
 from ros2_numpy import image_to_np, np_to_compressedimage, np_to_image
-from yolo_onnx_runner import YOLO
+from yolo_onnx_runner import YOLO # pip install git+https://github.com/william-mx/yolo-onnx-runner.git
 
 class RunYOLO(Node):
     def __init__(self, pkg_dir):
